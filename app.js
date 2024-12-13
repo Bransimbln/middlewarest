@@ -74,6 +74,7 @@ const db = await mysql.createConnection({
     database: process.env.DB_NAME,
 });
 
+// Log successful connection
 console.log('Connected to MySQL database');
 
 // Set EJS as the template engine
@@ -91,6 +92,7 @@ app.get('/', async (req, res) => {
     }
 });
 
-// app.listen(PORT, () => {
-//     console.log(`Server running on http://localhost:${PORT}`);
-// });
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
